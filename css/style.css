@@ -67,17 +67,17 @@ p {margin-bottom:18px}
 .menu li a, .list-1 li a, .list-2 li a, .link, .button, .logo {text-decoration:none}
 /*********************************header*************************************/
 header {width:100%;position:relative;z-index:2}
-.row-1 {width:100%;height:71px;background:url(../images/row1-top-tail.gif) left top repeat-x}
+.row-1 {width:100%;height:71px;background:url(../images/row1-top-tail.jpg) left top repeat-x}
 .row-2 {width:100%;min-height:101px;background:url(../images/row2-tail.gif) left top repeat-x #fff}
 h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:uppercase;margin-left:-4px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
 	h1 span {display:inline-block;	font-size:28px;	line-height:1.2em;	color:#949494;	letter-spacing:-1px;	padding:29px 0 0 4px}
-.logo {display:inline-block;font-size:60px;line-height:1.2em;;color:#262626;cursor:pointer;letter-spacing:-3px}
-	.logo strong {color:#ff9601; font-weight:normal}
+.logo {font-family: "Black Ops One", cursive;display:inline-block;font-size:60px;line-height:1.2em;;color:#262626;cursor:pointer;letter-spacing:-3px}
+	.logo strong {color:#db4a3e; font-weight:normal}
 /***** menu *****/
 .menu {float:right;padding:0;}
 .menu li {float:left;position:relative}
-	.menu li:first-child {background:url(../images/menu-a-tail.gif) 0 -71px no-repeat}
-.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.gif) right -71px no-repeat;letter-spacing:-1px}
+	.menu li:first-child {background:url(../images/menu-a-tail.jpg) 0 -71px no-repeat}
+.menu li a {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;display:block;width:188px;font-size:21px;line-height:1.238em;padding:21px 0 24px 0;color:#262626;text-align:center;text-transform:uppercase;background:url(../images/menu-a-tail.jpg) right -71px no-repeat;letter-spacing:-1px}
 .menu li a:hover,
 .menu li a.active {color:#fff;background-position:left top;background-repeat:repeat-x;background-color:#000}
 /***** search form *****/
