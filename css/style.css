@@ -37,7 +37,7 @@ p {margin-bottom:18px}
 .color-1 {color:#fff}
 .color-2 {color:#000}
 .color-3 {color:#262626}
-.color-4 {color:#ff9601}
+.color-4 {color:#db4a3e}
 .frame {padding:10px;background:#fff;box-shadow: 3px 5px 8px rgba(0,0,0,0.70);-moz-box-shadow: 3px 5px 8px rgba(0,0,0,0.70);-webkit-box-shadow: 3px 5px 8px rgba(0,0,0,0.70)}
 .frame2 {padding:9px;background:#fff;border:1px solid #e5e5e5}
 /*********************************boxes**********************************/
@@ -142,7 +142,7 @@ h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:upper
 .spacer-1 {width:100%;background:url(../images/pic-1.gif) 217px 0 repeat-y}
 h3 {font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:36px;line-height:1.2em;margin:0 0 22px 0;color:#262626;font-weight:normal;letter-spacing:-2px}
 h6 {color:#ff9601}
-.title {display:inline-block;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:49px;line-height:71px;text-transform:uppercase;letter-spacing:-3px;color:#ff9601;padding:0 25px 0 0;background:url(../images/pic-2.gif) right 0 repeat-y}
+.title {display:inline-block;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;font-size:49px;line-height:71px;text-transform:uppercase;letter-spacing:-3px;color:#db4a3e;padding:0 25px 0 0;background:url(../images/pic-2.gif) right 0 repeat-y}
 	.title.t2 {font-size:60px;	line-height:1.3em;	padding:0 40px 0 0;	background:url(../images/pic-3.gif) right 0 no-repeat}
 .tdate-1 {display:block;font-weight:bold}
 .border-bot {width:100%;padding-bottom:20px;background:url(../images/pic-1.gif) 0 bottom repeat-x}
