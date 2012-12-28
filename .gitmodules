@@ -1,0 +1,3 @@
+[submodule "gallery-viewer"]
+	path = gallery-viewer
+	url = git://github.com/belo32/gallery-viewer.git
