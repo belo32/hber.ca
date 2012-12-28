@@ -1,6 +1,3 @@
-[submodule "g-viewer"]
-	path = g-viewer
-	url = https://github.com/belo32/gallery-viewer.git
 [submodule "gallery-viewer"]
 	path = gallery-viewer
 	url = https://github.com/belo32/gallery-viewer
