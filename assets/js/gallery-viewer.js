@@ -9,7 +9,7 @@
 */
 var facebookUrl = "https://graph.facebook.com/";
 var photosExt = "/photos?fields=source";
-JQuery.support.cors = true;
+jQuery.support.cors = true;
 $(document).ready(function(){
 	var id =$('.fb-album').attr('data-id');
 	var albumUrl = facebookUrl + id + photosExt 
