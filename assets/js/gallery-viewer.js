@@ -23,6 +23,7 @@ function getAjaxJSON(albumUrl){
 $.ajax({
     url: albumUrl,
     dataType: "json",
+    cache: false,
     type: "GET",
     success: function(data) {
         
