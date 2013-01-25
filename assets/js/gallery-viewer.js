@@ -22,7 +22,7 @@ $(document).ready(function(){
 function getAjaxJSON(albumUrl){
 $.ajax({
     url: albumUrl,
-    dataType: "json",
+    dataType: 'json',
     cache: false,
     type: "GET",
     success: function(data) {
@@ -48,7 +48,7 @@ $.ajax({
         
     },
     error: function (xhr, textStatus, errorThrown) {
-        console.log("error "+ textStatus);
+        console.log("error "+ textStatus +" " + errorThrown);
         
     },
     complete: function(data){
