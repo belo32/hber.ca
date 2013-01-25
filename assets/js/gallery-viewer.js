@@ -24,6 +24,7 @@ $.ajax({
     url: albumUrl,
     dataType: 'json',
     cache: false,
+    contentType: "application/json",
     type: "GET",
     success: function(data) {
         
