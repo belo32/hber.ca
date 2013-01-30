@@ -7,7 +7,7 @@
 /**
 * This is customized for the view of hber.ca
 */
-var facebookUrl = "https://graph.facebook.com/";
+var facebookUrl = "http://graph.facebook.com/";
 var photosExt = "/photos?fields=source";
 jQuery.support.cors = true;
 $(document).ready(function(){
