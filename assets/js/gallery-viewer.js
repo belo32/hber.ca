@@ -11,7 +11,7 @@ if (!(window.console && console.log)) { (function() { var noop = function() {}; 
 var facebookUrl = "http://graph.facebook.com/";
 var photosExt = "/photos?fields=source";
 jQuery.support.cors = true;
-$(function(){
+$(document).ready(function(){
 	var id =$('.fb-album').attr('data-id');
 	var albumUrl = facebookUrl + id + photosExt 
 	getAjaxJSON(albumUrl);
