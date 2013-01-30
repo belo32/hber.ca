@@ -31,7 +31,7 @@ $.ajax({
         
         var dataArray = data.data;
         $.each(dataArray, function(i,item){
-        	console.log(item.source);
+        	/*console.log(item.source);*/
         	
 
             var ref =$("<a></a>").attr({
@@ -46,15 +46,15 @@ $.ajax({
 
         $(".fb-album a").touchTouch(); 
 
-        console.log(dataArray);
+        /*console.log(dataArray);*/
         
     },
     error: function (xhr, textStatus, errorThrown) {
-        console.log("error "+ textStatus +" " + errorThrown);
+        /*console.log("error "+ textStatus +" " + errorThrown);*/
         
     },
     complete: function(data){
-    	console.log("complete");
+    	/*console.log("complete");*/
     }
 	});
 
