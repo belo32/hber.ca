@@ -7,10 +7,11 @@
 /**
 * This is customized for the view of hber.ca
 */
+window.console = window.console || {log:function(){}};
 var facebookUrl = "http://graph.facebook.com/";
 var photosExt = "/photos?fields=source";
 jQuery.support.cors = true;
-$(document).ready(function(){
+$(function(){
 	var id =$('.fb-album').attr('data-id');
 	var albumUrl = facebookUrl + id + photosExt 
 	getAjaxJSON(albumUrl);
