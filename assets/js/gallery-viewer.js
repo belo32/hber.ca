@@ -25,6 +25,8 @@ $.ajax({
     dataType: 'json',
     cache: false,
     type: "GET",
+    crossDomain: true,
+    
     success: function(data) {
         
         var dataArray = data.data;
