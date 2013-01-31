@@ -71,8 +71,8 @@ header {width:100%;position:relative;z-index:2}
 .row-2 {width:100%;min-height:101px;background:url(../images/row2-tail.gif) left top repeat-x #fff}
 h1 {padding:15px 0 0 0;position:relative;font-weight:normal;text-transform:uppercase;margin-left:-4px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif}
 	h1 span {display:inline-block;	font-size:28px;	line-height:1.2em;	color:#949494;	letter-spacing:-1px;	padding:29px 0 0 4px}
-.logo {font-family: "Black Ops One", cursive;display:inline-block;font-size:60px;line-height:1.2em;;color:#262626;cursor:pointer;letter-spacing:-3px}
-	.logo strong {color:#db4a3e; font-weight:normal}
+.logo {font-family: "Black Ops One", cursive;display:inline-block;font-size:80px;line-height:1.2em;;color:#262626;cursor:pointer;letter-spacing:-3px}
+	.logo strong {color:#db4a3e; display:inline-block;font-weight:normal}
 /***** menu *****/
 .menu {float:right;padding:0;}
 .menu li {float:left;position:relative}
