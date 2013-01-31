@@ -37,11 +37,12 @@ $.ajax({
         	
 
             var ref =$("<a></a>").attr({
-                class:"fb-image grid_4",
+                
                 
                 href: item.source,
                 sytle: "background-image:url("+item.source+")"
                 });
+            ref.addClass("fb-image grid_4");
         	$("<img/>").attr("src",item.source).appendTo(ref);
 				ref.appendTo(".fb-album");
         });
