@@ -1,6 +1,7 @@
 # Can ignore specific files
 .DS_Store
 temp/**/*
+temp/*
 hber_timesheet.xls
 readme.txt
 file.txt
