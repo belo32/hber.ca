@@ -17,73 +17,90 @@ $(document).ready(function(){
 	var id =$('.fb-album').attr('data-id');
 	var albumUrl = facebookUrl + id + photosExt 
 	var promise = getAjaxJSON(albumUrl);
-	
+
 	promise.success(function(data){
 		handleData(data);
 	});
-	
-	
+
+
 
 });
 
 function getAjaxJSON(albumUrl){
-return $.ajax({
-    url: albumUrl,
-    dataType: 'json',
-    cache: false,
-    type: "GET",
-    crossDomain: true,
-    
-   /* success: function(data) {
-      //  handleData(data);
-        
-    },*/
-    error: function (xhr, textStatus, errorThrown) {
-        console.log("error "+ textStatus +" " + errorThrown);
-        
-    },
-    complete: function(data){
-    	console.log("complete");
-    }
-	});
+	return $.ajax({
+		url: albumUrl,
+		dataType: 'json',
+		cache: false,
+		type: "GET",
+		crossDomain: true,
 
-}
+		/* success: function(data) {
+			//  handleData(data);
+
+			},*/
+			error: function (xhr, textStatus, errorThrown) {
+				console.log("error "+ textStatus +" " + errorThrown);
+
+			},
+			complete: function(data){
+				console.log("complete");
+			}
+		});
+
+	}
 function buildElement(item){
-	
-    var ref =$("<a></a>").attr({
-        href: item.source,
-        sytle: "background-image:url("+item.source+")"
-        });
-    ref.addClass("fb-image");
+
+	var ref =$("<a></a>").attr({
+		href: item.source,
+		sytle: "background-image:url("+item.source+")"
+	});
+	ref.addClass("fb-image");
 
 	$("<img/>").attr("src",item.source).appendTo(ref);
-	
+
 	return ref;
 }
 
 
-function callExternalFunctions(){
+	function callExternalFunctions(){
 	var container = document.querySelector('.fb-album');
-	 $(".fb-album a").touchTouch(); 
+	$(".fb-album a").touchTouch(); 
 	imagesLoaded(container, function(){
-	$(".fb-album").masonry({
-		columnWidth:'.fb-image',
-		itemSelector: '.fb-image'
-			
+		$(".fb-album").masonry({
+			columnWidth:'.fb-image',
+			itemSelector: '.fb-image'
+
+		});
 	});
-});
 }
 
-$(window).scroll(function() {
+
+var throttled = _.throttle(scrollHandler, 1000);
+jQuery(window).on('scroll', throttled);
+
+
+
+/*$(window).scroll(function() {
 	if(nextPageUrl != null){
-   		if($(window).scrollTop() + $(window).height() == $(document).height() ) {
-       		var promise = getAjaxJSON(nextPageUrl);
+		if($(window).scrollTop() + $(window).height() < $(document).height() ) {
+			var promise = getAjaxJSON(nextPageUrl);
 			promise.success(function(data){
 				handlePagedData(data);
 			});
-   		}
+		}
 	}
-});
+	});*/
+
+function scrollHandler(){
+	if(nextPageUrl != null){
+		if($(window).scrollTop() + $(window).height() < $(document).height() ) {
+			var promise = getAjaxJSON(nextPageUrl);
+			promise.success(function(data){
+				handlePagedData(data);
+			});
+		}
+	}
+}
 
 function appendElements(items){
 	// create new item elements'
@@ -104,25 +121,26 @@ function appendElements(items){
 		msnry.layout();
 	});
 
-	
+
 }
 
 function handleData(data){
-		nextPageUrl = data.paging.next;
-        var dataArray = data.data;
-        $.each(dataArray, function(i,item){
-        
-        var ref= buildElement(item);
-		ref.appendTo(".fb-album");
-			
-        });
+	nextPageUrl = data.paging.next;
+	var dataArray = data.data;
+	$.each(dataArray, function(i,item){
 
-       callExternalFunctions();
+		var ref= buildElement(item);
+		ref.appendTo(".fb-album");
+
+	});
+
+	callExternalFunctions();
 }
 
 function handlePagedData(data){
 	nextPageUrl = data.paging.next;
 	var items = data.data;
 	appendElements(items);
+	$(".fb-album a").touchTouch(); 
 }
 
