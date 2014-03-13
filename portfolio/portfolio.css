@@ -1,0 +1,16 @@
+.fb-album{
+	padding-top: 20px;
+}
+.fb-image {
+	width:33%;
+
+	margin-bottom:2px;
+	
+}
+.fb-image img{
+/*	height: 200;*/
+width:98%;
+padding-left: 1%;
+padding-top:1%;
+padding-bottom:1%;
+}
