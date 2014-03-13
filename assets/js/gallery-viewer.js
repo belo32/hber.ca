@@ -55,6 +55,7 @@ function buildElement(item){
 		sytle: "background-image:url("+item.source+")"
 	});
 	ref.addClass("fb-image");
+	
 
 	$("<img/>").attr("src",item.source).appendTo(ref);
 
@@ -64,14 +65,16 @@ function buildElement(item){
 
 	function callExternalFunctions(){
 	var container = document.querySelector('.fb-album');
-	$(".fb-album a").touchTouch(); 
+		$(".fb-album a").touchTouch(); 
 	imagesLoaded(container, function(){
 		$(".fb-album").masonry({
 			columnWidth:'.fb-image',
-			itemSelector: '.fb-image'
+			itemSelector: '.fb-image',
 
 		});
+		
 	});
+
 }
 
 
@@ -141,6 +144,7 @@ function handlePagedData(data){
 	nextPageUrl = data.paging.next;
 	var items = data.data;
 	appendElements(items);
+	$("#galleryOverlay").remove();
 	$(".fb-album a").touchTouch(); 
 }
 
